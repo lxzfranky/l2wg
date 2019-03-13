@@ -6,3 +6,8 @@ type app struct {
 	Handlers *ControllerRegister
 	Server   *http.Server
 }
+
+func AppRun() *Router {
+	return &Router{
+	}
+}

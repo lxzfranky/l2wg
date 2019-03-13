@@ -15,3 +15,6 @@ type Context struct {
 	handlers []Handler
 }
 
+func (n *node) addRoute(path string, handler ...Handler) {
+
+}
