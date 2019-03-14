@@ -1,5 +1,10 @@
 package l2wg
 
+import (
+	"github.com/kataras/iris/context"
+	"net/http"
+)
+
 type Router struct {
 	trees      map[string]*node
 	Middleware []Handler
@@ -49,4 +54,8 @@ func (r *Router) Handle(method, path string, handler ...Handler) {
 		r.trees[method] = root
 	}
 	root.addRoute(path, handler...)
+}
+
+func (r *Router) ServeHTTP(res http.ResponseWriter, req *http.Request)  {
+
 }

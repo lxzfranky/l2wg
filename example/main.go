@@ -18,5 +18,5 @@ func main()  {
 	// 返回一个路由
 	router := l2wg.AppRun()
 	router.GET("/hello/:name", BeforeRun, Run, AfterRun)
-
+	l2wg.Run(router, "8080")
 }
