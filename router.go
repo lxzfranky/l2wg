@@ -1,7 +1,6 @@
 package l2wg
 
 import (
-	"github.com/kataras/iris/context"
 	"net/http"
 )
 

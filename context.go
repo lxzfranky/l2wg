@@ -23,6 +23,11 @@ func (n *node) addRoute(path string, handler ...Handler) {
 
 }
 
+// State 获取State
+func (c *Context) State() int {
+	return c.state
+}
+
 // Next 跳过中间件
 func (c *Context) Next() {
 	c.index++
